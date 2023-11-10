@@ -58,14 +58,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,       KC_Y,     KC_U,     KC_I,    KC_O,    KC_P,
   KC_Z,    LCTLS,   LALTD,   KC_F,    KC_G,       KC_H,     KC_J,     RALTK,   RCTLL,   KC_SLSH,
   LSFTA,   KC_X,    KC_C,    KC_V,    LGUIB,      RGUIN,    KC_M,     KC_COMM, KC_DOT,  RSFTSCLN,
-                  LOWERBSPC, LOWER,   RAISESPC,   RAISEESC, LALT_SPC, RAISEESC
+                  LOWERBSPC, QK_LEAD, RAISESPC,   RAISEENT, LALT_SPC, RAISEESC
 ),
 
 [_COLEMAK] = LAYOUT (
-  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,       KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
-  KC_Z,    LCTLR,   LALTS,   KC_T,    KC_D,       KC_H,    KC_N,    RALTE,   RCTLI,   KC_SLSH,
-  LSFTA,   KC_X,    KC_C,    KC_V,    LGUIB,      RGUIK,   KC_M,    KC_COMM, KC_DOT,  RSFTO,
-                  LOWERBSPC, QK_LEAD, KC_SPC,     KC_ENT,  LALT_SPC,  RAISEESC
+  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,       KC_J,      KC_L,      KC_U,    KC_Y,    KC_SCLN,
+  KC_Z,    LCTLR,   LALTS,   KC_T,    KC_D,       KC_H,      KC_N,      RALTE,   RCTLI,   KC_SLSH,
+  LSFTA,   KC_X,    KC_C,    KC_V,    LGUIB,      RGUIK,     KC_M,      KC_COMM, KC_DOT,  RSFTO,
+                  LOWERBSPC, QK_LEAD, RAISESPC,   RAISEENT,  LALT_SPC,  RAISEESC
 ),
 
 [_LOWER] = LAYOUT (
@@ -76,10 +76,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_RAISE] = LAYOUT (
-  KC_GRV,  _______, _______,   _______, KC_HOME,   KC_END,   _______,  _______, _______, KC_BSLS,
-  KC_CAPS, KC_8,    KC_7,      KC_6,    KC_MINS,   KC_EQL,   KC_1,     KC_2,    KC_3,    _______,
+  KC_GRV,  _______, _______,   KC_PGDN, KC_HOME,   KC_END,   KC_PGUP,  _______, _______, KC_BSLS,
+  KC_CAPS, KC_8,    KC_7,      KC_6,    KC_MINS,   KC_EQL,   KC_1,     KC_2,    KC_3,    KC_QUOT,
   LSFT9,   KC_LEFT, KC_DOWN,   KC_LBRC, LGUI0,     RGUI5,    KC_RBRC,  KC_UP,   KC_RIGHT,   RSFT4,
-                    _______,   KC_DEL,  KC_TAB,    KC_ENT,   KC_BSLS,  _______
+                    _______,   KC_DEL,  KC_TAB,    KC_ENT,   _______,  _______
 ),
 
 // Adjust (Lower + Raise)

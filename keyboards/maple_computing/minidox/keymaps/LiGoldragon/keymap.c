@@ -41,13 +41,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 void leader_end_user(void) {
-  if (leader_sequence_one_key(KC_1)) {
-    SEND_STRING("¯\\_(ツ)_/¯");
+  // Solar Hand
+  if (leader_sequence_one_key(KC_N)) {
+    tap_code16(RGUI(KC_N));
+  }
+  if (leader_sequence_one_key(KC_E)) {
+    tap_code16(RGUI(KC_E));
   }
 
-  if (leader_sequence_one_key(KC_2)) {
-    SEND_STRING("凸(ツ)凸");
+  // Lunar Hand
+  if (leader_sequence_one_key(KC_T)) {
+    tap_code16(LGUI(KC_T));
   }
+  if (leader_sequence_one_key(KC_S)) {
+    tap_code16(LGUI(KC_S));
+  }
+  if (leader_sequence_five_keys(KC_R, KC_E, KC_S, KC_E, KC_T)) {
+    reset_keyboard();
+  }
+  
 }
 
 

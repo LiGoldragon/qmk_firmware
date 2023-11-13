@@ -4,6 +4,7 @@
 #include "../../config.h"
 
 #define EE_HANDS
+#define LEADER_PER_KEY_TIMING
 
 #undef PERMISSIVE_HOLD
 

@@ -43,19 +43,33 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 void leader_end_user(void) {
   // Solar Hand
   if (leader_sequence_one_key(KC_N)) {
-    tap_code16(RGUI(KC_N));
+    set_oneshot_mods(MOD_BIT(KC_RGUI));
   }
   if (leader_sequence_one_key(KC_E)) {
-    tap_code16(RGUI(KC_E));
+    set_oneshot_mods(MOD_BIT(KC_RALT));
+  }
+  if (leader_sequence_one_key(KC_I)) {
+    set_oneshot_mods(MOD_BIT(KC_RCTL));
+  }
+  if (leader_sequence_one_key(KC_O)) {
+    set_oneshot_mods(MOD_BIT(KC_RSFT));
   }
 
   // Lunar Hand
   if (leader_sequence_one_key(KC_T)) {
-    tap_code16(LGUI(KC_T));
+    set_oneshot_mods(MOD_BIT(KC_LGUI));
   }
   if (leader_sequence_one_key(KC_S)) {
-    tap_code16(LGUI(KC_S));
+    set_oneshot_mods(MOD_BIT(KC_LALT));
   }
+  if (leader_sequence_one_key(KC_R)) {
+    set_oneshot_mods(MOD_BIT(KC_LCTL));
+  }
+  if (leader_sequence_one_key(KC_A)) {
+    set_oneshot_mods(MOD_BIT(KC_LSFT));
+  }
+
+  // Reset
   if (leader_sequence_five_keys(KC_R, KC_E, KC_S, KC_E, KC_T)) {
     reset_keyboard();
   }
